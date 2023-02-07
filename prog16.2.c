@@ -1,12 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int LastOcc(int Arr[],int iSize,int No)
+int FirstOcc(int Arr[],int iSize,int No)
 {
     int iCnt=0;
     int iFrequency=0;
 
-    for(iCnt=iSize;iCnt>0;iCnt--)
+    for(iCnt=0;iCnt<iSize;iCnt++)
     {
         if(Arr[iCnt]==No)
         {
@@ -44,7 +44,7 @@ int main()
     }
     printf("enter the number whose frequency you want to search:\n");
     scanf("%d",&i);
-    iRet=LastOcc(ptr,iLength,i);
+    iRet=FirstOcc(ptr,iLength,i);
     printf("the index of number is %d",iRet);
         
     free(ptr);
